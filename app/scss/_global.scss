@@ -1,3 +1,35 @@
+html,
+body{
+  height: 100%;
+}
+
 body {
-  
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 24px;
+  color: $text;
+  @extend %rubik-400;
+}
+
+.main{
+  flex-grow: 1;
+}
+
+.main-container{
+  max-width: 1800px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container{
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+a{
+  @extend %rubik-400;
+  font-size: 14px;
+  color: $text;
 }
