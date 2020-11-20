@@ -1,14 +1,16 @@
 @import 'vars';
 @import 'fonts';
+@import 'libs';
 @import 'reset';
 @import 'global';
 
 .header{
   &__wrapper{
-   height: 145px;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+    @extend %width-1770;
+    height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -167,6 +169,295 @@
     border-left: 1px solid $text;
   }
 }
+
+.slider{
+  @extend %width-1770;
+  &__wrapper{
+    background-color: #fcd7b6;
+    padding-bottom: 45px;   
+  }
+  &__items{
+    max-width: 1400px;
+    margin: 0 auto;
+    background-image: url('../images/slider-bg.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
+  &__item-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 220px 0 200px;
+  }
+  &__item-title{
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 70px;
+    color: #243f4d;
+    max-width: 470px;
+    margin-bottom: 40px;
+  }
+  &__item-subtitle{
+    font-size: 18px;
+    line-height: 30px;
+    color: $header;
+    max-width: 370px;
+    margin-bottom: 40px;
+  }
+  &__item-link{
+    width: 200px;
+    padding: 22px 15px 22px 25px;
+    background-color: $accent;
+    display: block;
+    color: #fff;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 16px;
+    position: relative;
+    &::before{
+      @extend %arrow-btn;
+    }
+  }
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    li{
+      margin: 0 6px;
+      line-height: 0;
+      button{
+        padding: 0;
+        margin: 0;
+        border: none;
+        width: 30px;
+        height: 30px;
+        background-color: #fde3cc;
+        border-radius: 50%;
+        @extend %rubik-500;
+        font-size: 10px;
+        line-height: 8px;
+        color: #667983;
+      }
+      &.slick-active{
+        button{
+          background-color: #fff;
+          color: #243f4d;
+        }
+      }
+    }
+  }
+}
+
+.slider-info{
+  background-color: $lshade;
+  display: flex;
+  justify-content: space-between;
+  &__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 170px;
+    width: 33.33333%;
+  }
+  &__item + .slider-info__item{
+    border-left: 1px solid #e8e4df;
+  }
+  &__item-text{
+    max-width: 295px;
+    padding-left: 80px;
+    position: relative;
+    &::before{
+      content: '';
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      left: 0;
+      top: 10px;
+    }
+  }
+  &__item-text--support::before{
+    background-image: url('../images/icons/support.svg');
+    width: 50px;
+    height: 53px;
+  }
+  &__item-text--delivery::before{
+    background-image: url('../images/icons/delivery.svg');
+    width: 53px;
+    height: 36px;
+  }
+  &__item-text--payment::before{
+    background-image: url('../images/icons/payment.svg');
+    width: 54px;
+    height: 52px;
+  }
+  &__item-title{
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 35px;
+    color: #414141;
+  }
+  &__item-subtitle{
+    @extend %dmsans-400;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+.products-week{
+  padding-top: 70px;
+  &__title{
+    @extend %title;
+  }
+  &__filter{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+  &__filter-btn{
+    border: none;
+    background-color: transparent;
+    @extend %dmsans-700;
+    font-size: 16px;
+    cursor: pointer;
+    color: #8b8b8b;
+  }
+  &__filter-btn + .products-week__filter-btn{
+    margin-left: 30px;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 185px;
+  }
+  &__item{
+    font-size: 16px;
+    line-height: 40px;
+    background-color: #fff;
+    width: 270px;
+    min-height: 380px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 10px;
+    padding: 25px 0 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+  }
+  &__images{
+    margin-bottom: 70px;
+  }
+  &__item-title{
+    @extend %dmsans-500;
+    font-size: 16px;
+    color: #243f4d;
+    margin-bottom: 5px;
+  }
+  &__price{
+    @extend %dmsans-700;
+    color: #a3bbc8;
+  }
+  &__nav{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s;
+  }
+  &__nav-item{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    transition: all .5s;
+    &:hover{
+      background-color: $accent;
+    }
+    &:hover path{
+      fill: #fff;
+    }
+  }
+  &__nav-item + .products-week__nav-item{
+    margin-left: 10px;
+  }
+  &__item{
+    &:hover .products-week__nav{
+      opacity: 1;
+    }
+  }
+  &__focus{
+    display: flex;
+    @extend %width-1770;
+    justify-content: space-between;
+  }
+  &__focus-item{
+    display: flex;
+    background-color: #feefe2;
+    padding-left: 140px;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    min-height: 385px;
+    flex-grow: 1;
+  }
+  &__focus-item + .products-week__focus-item{
+    margin-left: 30px;
+  }
+  &__focus-img{
+    margin-top: -180px;
+  }
+  &__focus-text{
+    max-width: 400px;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__focus-tittle{
+    @extend %dmsans-700;
+    color: #243f4d;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 25px;
+  }
+  &__focus-subtitle{
+    font-size: 16px;
+    line-height: 30px;
+    color: #243f4d;
+    margin-bottom: 35px;
+  }
+  &__focus-link{
+    @extend %rubik-500;
+    color: #436372;
+    font-size: 15px;
+    line-height: 12px;
+    width: 180px;
+    padding: 24px 20px;
+    border: 1px solid #b3b7b5;
+    border-radius: 5px;
+    position: relative;
+    &::before{
+      @extend %arrow-btn;
+      background-image: url('../images/icons/arrow-btn2.svg');
+    }
+  }
+}
+
+
+
+
+
+
+
+
 
 
 
