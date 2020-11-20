@@ -39,3 +39,22 @@ $header: #436372;
   padding: 0 15px;
   margin: 0 auto;
 }
+
+%arrow-btn{
+  content: '';
+  width: 22px;
+  height: 9px;
+  background-image: url('../images/icons/arrow-btn.svg');
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%title{
+  @extend %dmsans-700;
+  font-size: 36px;
+  color: $title;
+  text-align: center;
+  margin-bottom: 35px;
+}
