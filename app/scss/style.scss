@@ -14,19 +14,6 @@
   }
 }
 
-.logo{
-  display: flex;
-  align-items: center;
-  &__img{
-    padding-right: 10px;
-  }
-  &__text{
-    @extend %rubik-500;
-    font-size: 36px;
-    color: #436372;
-  }
-}
-
 .menu{
   &__list{
     display: flex;
@@ -98,6 +85,7 @@
   padding: 70px 0;
   border-bottom: 1px solid #dae4e9;
   &__logo{
+    display: inline-block;
     margin-bottom: 25px;
   }
   &__title{
@@ -469,10 +457,14 @@
   &__item{
     max-width: 370px;
     height: 245px;
-    padding: 40px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center right;
+  }
+  &__item-link{
+    display: block;
+    padding: 40px;
+    height: 100%;
   }
   &__item-title{
     @extend %dmsans-700;
@@ -497,11 +489,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  &__play-images{
-    width: 127px;
-    height: 127px;
-    position: relative;
-    overflow: hidden;
+  &__icon-hover{
+    opacity: 0;
+    transition: all .5s;
+  }
+  &:hover{
+    .video__icon-hover{
+      opacity: .4;
+    }
   }
 }
 

@@ -67,3 +67,10 @@ $header: #436372;
   cursor: pointer;
   color: #8b8b8b;
   }
+
+  @function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+  }
+  @function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+  }
