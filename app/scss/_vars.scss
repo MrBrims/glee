@@ -58,3 +58,12 @@ $header: #436372;
   text-align: center;
   margin-bottom: 35px;
 }
+
+%filter-btn{
+  border: none;
+  background-color: transparent;
+  @extend %dmsans-700;
+  font-size: 16px;
+  cursor: pointer;
+  color: #8b8b8b;
+  }
