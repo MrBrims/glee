@@ -500,6 +500,105 @@
   }
 }
 
+.insights{
+  background: linear-gradient(to top, $lshade 52%, transparent 50%);
+  padding: 115px 0 100px;
+  &__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    @extend %dmsans-700;
+  }
+  &__title{
+    font-size: 36px;
+    color: $title;
+  }
+  &__link{
+    font-size: 16px;
+    color: #262626;
+    position: relative;
+    padding-right: 25px;
+    line-height: 30px;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 11px;
+      background-image: url('../images/icons/arrow-right.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      top: 50%;
+      right: 0;
+      transform: translateY(-56%);
+    }
+  }
+  &__items{
+    margin-bottom: 101px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    max-width: 370px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  &__item + .insights__item{
+    margin-left: 30px;
+  }
+  &__item-img{
+    width: 370px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: -20px;
+  }
+  &__item-category{
+    padding: 7px 30px;
+    @extend %poppins-700;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $accent;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0 0 20px 25px;
+  }
+  &__item-content{
+    padding: 0 30px 20px;
+  }
+  &__item-description{
+    @extend %dmsans-500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #262626;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    min-height: 95px;
+  }
+  &__item-elements{
+    display: flex;
+    @extend %dmsans-500;
+    font-size: 12px;
+    color: #262626;
+    text-transform: uppercase;
+  }
+  &__item-date{
+    margin-right: 30px;
+  }
+}
+
+.insights-partners{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+
 
 
 
