@@ -580,6 +580,9 @@
   }
   &__item-elements{
     display: flex;
+  }
+  &__item-autor,
+  &__item-date{
     @extend %dmsans-500;
     font-size: 12px;
     color: #262626;
@@ -590,34 +593,77 @@
   }
 }
 
-.insights-partners{
+.insights-partners,
+.partners__wrapper{
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.breadcrumbs{
-  padding: 30px 0;
-  background-color: #edf1f4;
-  &__title{
-    @extend %rubik-300;
-    font-size: 36px;
-    line-height: 36px;
-    color: #222933;
-    text-align: center;
-    margin-bottom: 10px;
+.partners{
+  background-color: $lshade;
+  padding: 80px 0;
+}
+
+.modal{
+  padding: 110px 0;
+  &__form{
+    max-width: 470px;
+    width: 100%;
+    margin: 0 auto;
+    color: #436372;
   }
-  &__wrapper{
+  &__label{
+    cursor: pointer;
+  }
+  &__input{
+    display: block;
+    width: 100%;
+    border: 1px solid #f6f6f6;
+    padding: 17px 15px;
+    margin: 10px 0 30px;
+  }
+  &__btn{
+    display: block;
+    width: 100%;
+    height: 60px;
+    color: #fff;
+    @extend %rubik-500;
+    font-size: 18px;
+    border: none;
+    background-color: $accent;
+    cursor: pointer;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f6f6f6;
+    padding: 30px 0;
+    margin-bottom: 25px;
+  }
+  &__lost{
+    color: inherit;
+  }
+  &__text{
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  &__create-account{
+    display: block;
+    width: 100%;
+    height: 60px;
+    color: #243f4d;
+    @extend %rubik-500;
+    font-size: 18px;
+    border: 2px solid $accent;
     display: flex;
     justify-content: center;
-  }
-  &__separator{
-    margin: 0 5px;
-  }
-  &__link{
-    color: #222933;
+    align-items: center;
   }
 }
+
+
 
 
 
