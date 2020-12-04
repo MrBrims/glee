@@ -580,6 +580,9 @@
   }
   &__item-elements{
     display: flex;
+  }
+  &__item-autor,
+  &__item-date{
     @extend %dmsans-500;
     font-size: 12px;
     color: #262626;
@@ -590,11 +593,325 @@
   }
 }
 
-.insights-partners{
+.insights-partners,
+.partners__wrapper{
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
+.partners{
+  background-color: $lshade;
+  padding: 80px 0;
+}
+
+.modal{
+  padding: 110px 0;
+  &__form{
+    max-width: 470px;
+    width: 100%;
+    margin: 0 auto;
+    color: #436372;
+  }
+  &__label{
+    cursor: pointer;
+  }
+  &__input{
+    display: block;
+    width: 100%;
+    border: 1px solid #f6f6f6;
+    padding: 17px 15px;
+    margin: 10px 0 30px;
+  }
+  &__btn{
+    display: block;
+    width: 100%;
+    height: 60px;
+    color: #fff;
+    @extend %rubik-500;
+    font-size: 18px;
+    border: none;
+    background-color: $accent;
+    cursor: pointer;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f6f6f6;
+    padding: 30px 0;
+    margin-bottom: 25px;
+  }
+  &__lost{
+    color: inherit;
+  }
+  &__text{
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  &__create-account{
+    display: block;
+    width: 100%;
+    height: 60px;
+    color: #243f4d;
+    @extend %rubik-500;
+    font-size: 18px;
+    border: 2px solid $accent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.terms{
+  padding-top: 115px;
+  color: #243f4d;
+  font-size: 16px;
+  line-height: 30px;
+  &__title{
+    @extend %rubik-500;
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 15px;
+    &:not(:first-child){
+      margin-top: 70px;
+    }
+  }
+  .terms__list{
+    list-style-type: decimal-leading-zero;
+    margin-left: 32px;
+  }
+  &__list-item{
+    padding-left: 10px;
+    margin-bottom: 30px;
+  }
+  &__text{
+    margin-bottom: 20px;
+  }
+}
+
+.about{
+  padding: 125px 0;
+  @extend %rubik-400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #243f4d;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__img{
+    margin-right: 50px;
+  }
+  &__worktime{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+  }
+  &__worktime-num{
+    @extend %rubik-700;
+    font-size: 140px;
+    line-height: 1;
+    color: $accent;
+    margin-right: 30px;
+  }
+  &__worktime-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+  &__title{
+    font-size: 36px;
+    line-height: 32px;
+    @extend %dmsans-700;
+    margin-bottom: 40px;
+  }
+  &__description{
+    margin-bottom: 65px;
+  }
+  &__num{
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #ebeef3;
+    padding-top: 30px;
+  }
+  &__num-item{
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 32px;
+    width: 170px;
+    height: 80px;
+    position: relative;
+    padding: 10px 0 0 60px;
+    span{
+      display: block;
+      font-size: 16px;
+      line-height: 17px;
+      color: #4c4c4c;
+      margin-top: 5px;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+    &:nth-child(1){
+      border-right: 1px solid #e6eaf0;
+      &::before{
+        width: 36px;
+        height: 37px;
+        top: 19px;
+        background-image: url('../images/icons/about-list.svg');
+      }
+    }
+    &:nth-child(2){
+      border-right: 1px solid #e6eaf0;
+      &::before{
+        width: 43px;
+        height: 39px;
+        top: 17px;
+        background-image: url('../images/icons/about-rup.svg');
+      }
+    }
+    &:nth-child(3){
+      &::before{
+        width: 41px;
+        height: 40px;
+        top: 18px;
+        background-image: url('../images/icons/about-med.svg');
+      }
+    }
+  }
+}
+
+.statistic{
+  padding: 85px 0;
+  background-color: #fcd7b6;
+  &__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend %dmsans-700;
+    color: #243f4d;
+    line-height: 32px;
+  }
+  &__items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    max-width: 270px;
+    width: 100%;
+  }
+  &__items + .statistic__items{
+    margin-left: 30px;
+  }
+  &__img{
+    margin-bottom: 20px;
+  }
+  &__num{
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  &__text{
+    font-size: 18px;
+  }
+}
+
+.team{
+  padding-top: 120px;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content{
+    max-width: 370px;
+    width: 100%;
+    margin-right: 30px;
+    color: #243f4d;
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 25px;
+  }
+  &__text{
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 35px;
+    max-width: 320px;
+  }
+  &__link{
+    @extend %poppins-700;
+    font-size: 15px;
+    color: #fff;
+    width: 170px;
+    background-color: $accent;
+    display: block; 
+    padding: 13px 15px;
+    position: relative;
+    border-radius: 5px;
+    &::after{
+      content: '';
+      width: 15px;
+      height: 11px;
+      background-image: url('../images/icons/arrow-btn-light.svg');
+      position: absolute;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+  }
+  &__item{
+    width: 370px;
+  }
+  &__photo{
+    height: 320px;
+    object-fit: cover;
+    z-index: -1;
+    position: relative;
+  }
+  &__description{
+    width: 324px;
+    padding: 25px 15px;
+    background-color: #fff;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    margin-top: -50px;
+    color: #436372;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__name{
+    @extend %dmsans-700;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+  &__positin{
+    font-size: 16px;
+  }
+  &__social{
+    display: flex;
+    align-items: center;
+  }
+  &__social-link + .team__social-link{
+    margin-left: 9px;
+  }
+}
+
+
+
+
 
 
 
