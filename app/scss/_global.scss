@@ -70,6 +70,10 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
+  &--left{
+    justify-content: start;
+  }
   .pagination__list{
     display: flex;
     margin-right: 7px;
