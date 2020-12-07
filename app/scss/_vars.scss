@@ -76,7 +76,15 @@ $header: #436372;
   font-size: 16px;
   cursor: pointer;
   color: #8b8b8b;
-  }
+}
+
+%hidden-input{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
 
   @function max($numbers...) {
     @return m#{a}x(#{$numbers});
