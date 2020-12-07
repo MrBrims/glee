@@ -66,6 +66,34 @@ a{
   }
 }
 
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .pagination__list{
+    display: flex;
+    margin-right: 7px;
+  }
+  &__item + .pagination__item{
+    margin-left: 7px;
+  }
+  &__link,
+  &__next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 0 20px;
+    border: 1px solid $accent;
+    color: #243f4d;
+    font-size: 16px;
+  }
+  &__link--active{
+    background-color: $accent;
+    color: #fff;
+  }
+}
+
 .filter__title{
   @extend %dmsans-700;
   color: #243f4d;
