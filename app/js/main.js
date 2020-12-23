@@ -1,5 +1,43 @@
 $(function () {
 
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 4,
+    spaceBetween: 35,
+    // slidesPerGroup: 4,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  $('.tabs__top-item').on('click', function (e) {
+    e.preventDefault();
+    $('.tabs__top-item').removeClass('tabs__top-item--active');
+    $(this).addClass('tabs__top-item--active');
+
+    $('.tabs__content-item').removeClass('tabs__content-item--active');
+    $($(this).attr('href')).addClass('tabs__content-item--active');
+  });
+
+  $('.store-thumb__left').slick({
+    asNavFor: '.store-thumb__right',
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false
+  });
+  $('.store-thumb__right').slick({
+    asNavFor: '.store-thumb__left',
+    draggable: false,
+    arrows: false,
+    fade: true
+  });
+
+  $('.store__info-input').styler();
+
   $('.shop__content-btn').on('click', function () {
     $('.shop__content-btn').removeClass('shop__content-btn--active');
     $(this).addClass('shop__content-btn--active');
