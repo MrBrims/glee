@@ -24,6 +24,7 @@
     "mixitup": "^3.3.1",
     "node-sass": "^5.0.0",
     "rateyo": "^2.3.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^6.4.5"
   }
 }
