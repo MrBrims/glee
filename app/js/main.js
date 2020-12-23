@@ -1,5 +1,22 @@
 $(function () {
 
+  $('.store-thumb__left').slick({
+    asNavFor: '.store-thumb__right',
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false
+  });
+  $('.store-thumb__right').slick({
+    asNavFor: '.store-thumb__left',
+    draggable: false,
+    arrows: false,
+    fade: true
+  });
+
+  $('.store__info-input').styler();
+
   $('.shop__content-btn').on('click', function () {
     $('.shop__content-btn').removeClass('shop__content-btn--active');
     $(this).addClass('shop__content-btn--active');
