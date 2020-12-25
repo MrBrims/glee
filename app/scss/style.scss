@@ -1379,6 +1379,178 @@
   background-repeat: no-repeat;
 }
 
+.blog-list{
+  padding: 120px 0 0;
+  &__wrapper{
+    display: flex;
+  }
+  &__items{
+    width: calc(100% - 340px);
+    margin-right: 70px;
+  }
+  &__item{
+    margin-bottom: 50px;
+  }
+  &__item-imglink{
+    display: block;
+  }
+  &__item-img{
+    width: 830px;
+    height: 500px;
+    object-fit: cover;
+    margin-bottom: -70px;
+  }
+  &__item-meta{
+    display: inline-flex;
+    padding: 25px 20px;
+    background-color: $accent;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 35px;
+    position: relative;
+  }
+  &__item-date,
+  &__item-author{
+    color: inherit;
+    font-size: inherit;
+    padding-left: 20px;
+    position: relative;
+    &::before{
+      content: '';
+      left: 0;
+      top: 2px;
+      width: 13px;
+      height: 14px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      position: absolute;
+    }
+  }
+  &__item-date{
+    margin-right: 25px;
+    &::before{
+      background-image: url('../images/icons/calendar.svg');
+    }
+  }
+  &__item-author{
+    &::before{
+      background-image: url('../images/icons/user.svg');
+    }
+  }
+  &__item-title{
+    font-size: 36px;
+    line-height: 42px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  &__item-titlelink{
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+  }
+  &__item-text{
+    font-size: 16px;
+    line-height: 30px;
+    color: #243f4d;
+    margin-bottom: 30px;
+  }
+  &__item-link{
+    width: 180px;
+    padding: 17px 0 17px 20px;
+    border: 1px solid $accent;
+    display: block;
+    font-size: 15px;
+    color: $accent;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 23px;
+      height: 10px;
+      right: 20px;
+      top: 24px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url('../images/icons/arrow-btn3.svg');
+    }
+  }
+  &__aside{
+    width: 270px;
+  }
+  &__aside-search{
+    display: flex;
+  }
+  &__aside-input{
+    width: 222px;
+    height: 43px;
+    border: 2px solid #edf1f4;
+    border-radius: 5px 0 0 5px;
+    padding: 0 10px;
+  }
+  &__aside-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #edf1f4;
+    border-radius: 5px;
+    border: none;
+    min-width: 51px;
+    height: 43px;
+    margin-left: -3px;
+    cursor: pointer;
+  }
+  .pagination{
+    justify-content: start;
+    margin-top: 0;
+    padding: 26px 0 120px;
+  }
+}
+
+.recent-posts{
+  &__item{
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &__imglink{
+    display: block;
+    margin-right: 20px;
+  }
+  &__img{
+    min-width: 71px;
+    height: 71px;
+    object-fit: cover;
+  }
+  &__title{
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  &__titlelink{
+    font-size: inherit;
+    color: inherit;
+  }
+  &__date{
+    font-size: 12px;
+    position: relative;
+    padding-left: 20px;
+    color: #9a9a9a;
+    &::before{
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-image: url('../images/icons/calendar-recent.svg');
+      width: 13px;
+      height: 13px;
+      left: 0;
+      top: 0;
+    }
+  }
+}
 
 
 
