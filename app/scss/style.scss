@@ -1746,20 +1746,33 @@
     &::after{
       content: '';
       position: absolute;
-      top: 0;
-      right: 0;
       background-repeat: no-repeat;
-      background-size: cover;
       background-position: center center;
+      right: 20px;
     }
   }
   &__form-label--name::after{
+    top: 19px;
     width: 14px;
     height: 13px;
     background-image: url('../images/icons/comment-user.svg');
   }
   &__form-label--email::after{
-    
+    top: 20px;
+    width: 18px;
+    height: 12px;
+    background-image: url('../images/icons/email-blog.svg');
+  }
+  &__form-label--text::after{
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+    right: 20px;
+    top: 20px;
+    width: 18px;
+    height: 15px;
+    background-image: url('../images/icons/comment.svg');
   }
   &__form-input{
     height: 50px;
@@ -1783,17 +1796,16 @@
     &::placeholder{
       color: #999;
     }
-    &::after{
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 18px;
-      height: 15px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-      background-image: url('../images/icons/comment.svg');
+  }
+  &__form-labeltext{
+    position: relative;
+  }
+  &__form-input,
+  &__form-text{
+    transition: all .5s;
+    &:focus{
+      outline: none;
+      border-color: $accent;
     }
   }
   &__form-btn{
