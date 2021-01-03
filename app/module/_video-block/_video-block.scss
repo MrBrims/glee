@@ -1,0 +1,19 @@
+.video{
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/video-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  &__icon-hover{
+    opacity: 0;
+    transition: all .5s;
+  }
+  &:hover{
+    .video__icon-hover{
+      opacity: .4;
+    }
+  }
+}

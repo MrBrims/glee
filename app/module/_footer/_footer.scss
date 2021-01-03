@@ -1,0 +1,76 @@
+.footer-top{
+  padding: 70px 0;
+  border-bottom: 1px solid #dae4e9;
+  &__logo{
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 54px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #1f2044;
+  }
+  &__items{
+    display: flex;
+  }
+  &__list-item{
+    margin-bottom: 12px;
+  }
+  &__adress{
+    max-width: 200px;
+  }
+  &__contact-details,
+  &__services,
+  &__account
+  {
+    width: 270px;
+    margin-right: 30px;
+  }
+  &__newsletter{
+    max-width: 270px;
+  }
+  &__text{
+    margin-bottom: 35px;
+  }
+  &__form{
+    @extend %dmsans-400;
+    font-size: 12px;
+  }
+  &__form-email{
+    border: none;
+    padding: 10px 15px;
+    background-color: $lshade;
+    width: 170px;
+    &::placeholder{
+      color: #234969;
+    }
+  }
+  &__form-btn{
+    border: none;
+    padding: 10px 15px;
+    background-color: #a3bbc8;
+    color: #fff;
+    margin-left: -3px;
+    cursor: pointer;
+  }
+}
+
+.footer-copy{
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__menu{
+    display: flex;
+  }
+  &__menu-list{
+    padding: 0 10px;
+    line-height: 1.2;
+  }
+  &__menu-list + .footer-copy__menu-list{
+    border-left: 1px solid $text;
+  }
+}
