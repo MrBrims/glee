@@ -1,0 +1,33 @@
+.statistic{
+  padding: 85px 0;
+  background-color: #fcd7b6;
+  &__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend %dmsans-700;
+    color: #243f4d;
+    line-height: 32px;
+  }
+  &__items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    max-width: 270px;
+    width: 100%;
+  }
+  &__items + .statistic__items{
+    margin-left: 30px;
+  }
+  &__img{
+    margin-bottom: 20px;
+  }
+  &__num{
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  &__text{
+    font-size: 18px;
+  }
+}

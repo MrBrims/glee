@@ -1,0 +1,27 @@
+.category-filter{
+  &__input{
+    @extend %hidden-input;
+    &:checked + .category-filter__checkbox{
+      background-color: #edf1f4;
+    }
+  }
+  &__label{
+    cursor: pointer;
+  }
+  &__checkbox{
+    display: block;
+    padding: 11px 12px;
+    border-radius: 5px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 11px;
+      background-image: url('../images/icons/arrow-right.svg');
+      top: 50%;
+      right: 23px;
+      transform: translateY(-49%);
+    }
+  }
+}

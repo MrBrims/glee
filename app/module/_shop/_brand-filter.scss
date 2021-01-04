@@ -1,0 +1,23 @@
+.brand-filter{
+  &__input{
+    @extend %hidden-input;
+    &:checked + .brand-filter__checkbox{
+      background-color: #edf1f4;
+      span:last-child{
+        color: #243f4d;
+      }
+    }
+  }
+  &__label{
+    cursor: pointer;
+  }
+  &__checkbox{
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 12px;
+    border-radius: 5px;
+    span:last-child{
+      color: #b3b3b3;
+    }
+  }
+}
