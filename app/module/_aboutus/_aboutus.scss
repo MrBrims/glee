@@ -1,0 +1,95 @@
+.about{
+  padding: 125px 0;
+  @extend %rubik-400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #243f4d;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__img{
+    margin-right: 50px;
+  }
+  &__worktime{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+  }
+  &__worktime-num{
+    @extend %rubik-700;
+    font-size: 140px;
+    line-height: 1;
+    color: $accent;
+    margin-right: 30px;
+  }
+  &__worktime-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+  &__title{
+    font-size: 36px;
+    line-height: 32px;
+    @extend %dmsans-700;
+    margin-bottom: 40px;
+  }
+  &__description{
+    margin-bottom: 65px;
+  }
+  &__num{
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #ebeef3;
+    padding-top: 30px;
+  }
+  &__num-item{
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 32px;
+    width: 170px;
+    height: 80px;
+    position: relative;
+    padding: 10px 0 0 60px;
+    span{
+      display: block;
+      font-size: 16px;
+      line-height: 17px;
+      color: #4c4c4c;
+      margin-top: 5px;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+    &:nth-child(1){
+      border-right: 1px solid #e6eaf0;
+      &::before{
+        width: 36px;
+        height: 37px;
+        top: 19px;
+        background-image: url('../images/icons/about-list.svg');
+      }
+    }
+    &:nth-child(2){
+      border-right: 1px solid #e6eaf0;
+      &::before{
+        width: 43px;
+        height: 39px;
+        top: 17px;
+        background-image: url('../images/icons/about-rup.svg');
+      }
+    }
+    &:nth-child(3){
+      &::before{
+        width: 41px;
+        height: 40px;
+        top: 18px;
+        background-image: url('../images/icons/about-med.svg');
+      }
+    }
+  }
+}

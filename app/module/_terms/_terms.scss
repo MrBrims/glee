@@ -1,0 +1,26 @@
+.terms{
+  padding-top: 115px;
+  color: #243f4d;
+  font-size: 16px;
+  line-height: 30px;
+  &__title{
+    @extend %rubik-500;
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 15px;
+    &:not(:first-child){
+      margin-top: 70px;
+    }
+  }
+  .terms__list{
+    list-style-type: decimal-leading-zero;
+    margin-left: 32px;
+  }
+  &__list-item{
+    padding-left: 10px;
+    margin-bottom: 30px;
+  }
+  &__text{
+    margin-bottom: 20px;
+  }
+}

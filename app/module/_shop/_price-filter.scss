@@ -1,0 +1,36 @@
+.irs--flat {
+  height: 15px;
+  margin-bottom: 20px;
+}
+
+.irs--flat .irs-line{
+  top: 6px;
+  height: 2px;
+  background-color: #c2d2db;
+  border-radius: 0;
+}
+
+.irs--flat .irs-bar{
+  top: 6px;
+  height: 3px;
+  background-color: $accent;
+}
+
+.irs--flat .irs-handle{
+  top: 0;
+  width: 15px;
+  height: 15px;
+  background-color: $accent;
+}
+
+.irs--flat .irs-handle>i:first-child,
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single,
+.irs--flat .irs-min, .irs--flat .irs-max{
+  display: none;
+}
+
+.price-filter__label{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}

@@ -1,0 +1,267 @@
+.blog-one{
+  padding-bottom: 40px;
+  h3,
+  h4{
+    margin: 20px 0;
+  }
+  h3{
+    color: #333;
+    font-size: 36px;
+    line-height: 42px;
+  }
+  h4{
+    font-size: 18px;
+    line-height: 32px;
+    color: #243f4d;
+  }
+  p{
+    font-size: 16px;
+    line-height: 30px;
+    color: #243f4d;
+    margin: 20px 0;
+  }
+  blockquote{
+    font-size: 16px;
+    line-height: 30px;
+    color: #243f4d;
+    border-left: 7px solid $accent;
+    background-color: #edf1f4;
+    padding: 20px 90px 20px 30px;
+    margin: 40px 0;
+    span{
+      display: block;
+      margin-top: 15px;
+      padding-left: 45px;
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 13px;
+        left: 0;
+        width: 20px;
+        height: 4px;
+        background-color: $accent;
+      }
+    }
+  }
+  &__imgtext{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  &__img-left{
+    margin-right: 30px;
+  }
+  &__author{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin: 60px 0;
+    border-top: 2px solid #ebebeb;
+    border-bottom: 2px solid #ebebeb;
+  }
+  &__author-box{
+    display: flex;
+    align-items: center;
+  }
+  &__author-img{
+    margin-right: 28px;
+  }
+  &__author-name{
+    @extend %rubik-500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  &__author-position{
+    font-size: 16px;
+    line-height: 30px;
+    color: #666;
+  }
+  &__author-meta{
+    span{
+      font-size: 16px;
+      line-height: 36px;
+      color: #333;
+    }
+  }
+  &__author-tags{
+    font-size: 16px;
+    span{
+      margin-right: 29px;
+    }
+  }
+  &__author-share{
+    span{
+      margin-right: 20px;
+    }
+  }
+  &__author-sharelink{
+    vertical-align: sub;
+    & + .blog-one__author-sharelink{
+      margin-left: 20px;
+    }
+  }
+  &__author-shareimg{
+    display: inline-block;
+  }
+}
+
+.comments{
+  padding-bottom: 80px;
+  .comments__title{
+    @extend %rubik-700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #436372;
+    margin-bottom: 50px;
+  }
+  &__item{
+    margin-bottom: 30px;
+  }
+  &__item-inner{
+    display: flex;
+  }
+  &__item-avatar{
+    min-width: 100px;
+    height: 100px;
+    margin-right: 30px;
+  }
+  &__item-info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &__item-name{
+    @extend %rubik-700;
+    color: #436372;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .comments__item-text{
+    color: #436372;
+  }
+  &__item-link{
+    color: #436372;
+    font-size: 14px;
+    position: relative;
+    padding-right: 22px;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 13px;
+      right: 0;
+      top: 2px;
+      background-image: url('../images/icons/reply.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+  .comments__items-child{
+    padding-left: 130px;
+    .comments__item{
+      padding: 30px 0;
+      border-bottom: 1px solid #e0e0e0;
+      &:first-child{
+        padding-top: 30px;
+        border-top: 1px solid #e0e0e0;
+        margin-top: 30px;
+      }
+      & + .comments__item{
+        padding-top: 0;
+      }
+    }
+  }
+  .comments__form-title{
+    margin-top: 80px;
+  }
+  &__form-info{
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &__form-label{
+    position: relative;
+    width: 400px;
+    &:last-child{
+      margin-left: 30px;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: center center;
+      right: 20px;
+    }
+  }
+  &__form-label--name::after{
+    top: 19px;
+    width: 14px;
+    height: 13px;
+    background-image: url('../images/icons/comment-user.svg');
+  }
+  &__form-label--email::after{
+    top: 20px;
+    width: 18px;
+    height: 12px;
+    background-image: url('../images/icons/email-blog.svg');
+  }
+  &__form-label--text::after{
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+    right: 20px;
+    top: 20px;
+    width: 18px;
+    height: 15px;
+    background-image: url('../images/icons/comment.svg');
+  }
+  &__form-input{
+    height: 50px;
+    padding: 0 50px 0 20px;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    border-radius: 0;
+    &::placeholder{
+      color: #999;
+    }
+  }
+  &__form-text{
+    width: 100%;
+    height: 120px;
+    padding: 20px;
+    resize: none;
+    border: 1px solid #e5e5e5;
+    border-radius: 0;
+    margin-bottom: 40px;
+    position: relative;
+    &::placeholder{
+      color: #999;
+    }
+  }
+  &__form-labeltext{
+    position: relative;
+  }
+  &__form-input,
+  &__form-text{
+    transition: all .5s;
+    &:focus{
+      outline: none;
+      border-color: $accent;
+    }
+  }
+  &__form-btn{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 13px 40px;
+    border: none;
+    background-color: $accent;
+    cursor: pointer;
+  }
+}

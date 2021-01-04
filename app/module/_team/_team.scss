@@ -1,0 +1,88 @@
+.team{
+  padding-top: 120px;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content{
+    max-width: 370px;
+    width: 100%;
+    margin-right: 30px;
+    color: #243f4d;
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 25px;
+  }
+  &__text{
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 35px;
+    max-width: 320px;
+  }
+  &__link{
+    @extend %poppins-700;
+    font-size: 15px;
+    color: #fff;
+    width: 170px;
+    background-color: $accent;
+    display: block; 
+    padding: 13px 15px;
+    position: relative;
+    border-radius: 5px;
+    &::after{
+      content: '';
+      width: 15px;
+      height: 11px;
+      background-image: url('../images/icons/arrow-btn-light.svg');
+      position: absolute;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+  }
+  &__item{
+    width: 370px;
+  }
+  &__photo{
+    height: 320px;
+    object-fit: cover;
+    z-index: -1;
+    position: relative;
+  }
+  &__description{
+    width: 324px;
+    padding: 25px 15px;
+    background-color: #fff;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    margin-top: -50px;
+    color: #436372;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__name{
+    @extend %dmsans-700;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+  &__positin{
+    font-size: 16px;
+  }
+  &__social{
+    display: flex;
+    align-items: center;
+  }
+  &__social-link + .team__social-link{
+    margin-left: 9px;
+  }
+}

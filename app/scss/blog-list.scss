@@ -1,7 +1,10 @@
 @import 'vars';
 @import 'fonts';
-@import 'libs';
 @import 'reset';
 @import 'global';
 @import '../module/_header/_header';
 @import '../module/_footer/_footer';
+@import '../module/_breadcrumbs/_breadcrumbs';
+@import '../module/_blog-list/_blog-list';
+@import '../module/_shop/_category-filter';
+@import '../module/_partners/_partners';
