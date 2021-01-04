@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/contacts.min.css">
-  <title>Glee</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contacts.min.css">
+    <title>Glee</title>
+  </head>
 
-<body>
-
-  <header class="header">
+  <body>
+    <header class="header">
   <div class="header__wrapper">
     <a class="logo" href="#">
       <img class="logo__img" src="images/logo.png" alt="logo">
@@ -58,28 +57,32 @@
     </div>
   </div>
 </header>
-
-  <main class="main">
-    <div class="breadcrumbs">
-      <div class="container">
-        <h2 class="breadcrumbs__title">
-          Contact
+    <main class="main">
+      <div class="breadcrumbs">
+  <div class="container">
+    <h2 class="breadcrumbs__title">
+          Page
         </h2>
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="#">
               Home
             </a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">
-              Contact
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="#">
+              Page
             </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <section class="contact">
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="#">
+              Page
+            </a>
+      </li>
+    </ul>
+  </div>
+</div>
+      <section class="contact">
       <div class="container">
         <p class="contact__subtitle">
           Write Here
@@ -168,7 +171,7 @@
         </div>
       </div>
     </section>
-    <section class="insights">
+      <section class="insights">
       <div class="container">
         <div class="insights__head">
           <h3 class="insights__title">
@@ -258,9 +261,8 @@
         </div>
       </div>
     </section>
-  </main>
-
-  <footer class="footer">
+    </main>
+    <footer class="footer">
   <div class="container">
     <div class="footer-top">
       <div class="footer-top__items">
@@ -376,158 +378,132 @@
     </div>
   </div>
 </footer>
-
-  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
     defer></script>
-  <script>
-    let map;
+    <script>
+      let map;
 
-    function initMap() {
-      map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 29.762058696674398, lng: -95.31343210920441 },
-        zoom: 8,
-        styles: 
-        [
-          {
-            "elementType": "geometry",
-            "stylers": [
+      function initMap() {
+        map = new google
+          .maps
+          .Map(document.getElementById("map"), {
+            center: {
+              lat: 29.762058696674398,
+              lng: -95.31343210920441
+            },
+            zoom: 8,
+            styles: [
               {
-                "hue": "#ff4400"
-              },
-              {
-                "saturation": -68
-              },
-              {
-                "lightness": -4
-              },
-              {
-                "gamma": 0.72
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "hue": "#ff4400"
+                  }, {
+                    "saturation": -68
+                  }, {
+                    "lightness": -4
+                  }, {
+                    "gamma": 0.72
+                  }
+                ]
+              }, {
+                "featureType": "road",
+                "elementType": "labels.icon"
+              }, {
+                "featureType": "landscape.man_made",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "hue": "#0077ff"
+                  }, {
+                    "gamma": 3.1
+                  }
+                ]
+              }, {
+                "featureType": "water",
+                "stylers": [
+                  {
+                    "hue": "#00ccff"
+                  }, {
+                    "gamma": 0.44
+                  }, {
+                    "saturation": -33
+                  }
+                ]
+              }, {
+                "featureType": "poi.park",
+                "stylers": [
+                  {
+                    "hue": "#44ff00"
+                  }, {
+                    "saturation": -23
+                  }
+                ]
+              }, {
+                "featureType": "water",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "hue": "#007fff"
+                  }, {
+                    "gamma": 0.77
+                  }, {
+                    "saturation": 65
+                  }, {
+                    "lightness": 99
+                  }
+                ]
+              }, {
+                "featureType": "water",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                  {
+                    "gamma": 0.11
+                  }, {
+                    "weight": 5.6
+                  }, {
+                    "saturation": 99
+                  }, {
+                    "hue": "#0091ff"
+                  }, {
+                    "lightness": -86
+                  }
+                ]
+              }, {
+                "featureType": "transit.line",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "lightness": -48
+                  }, {
+                    "hue": "#ff5e00"
+                  }, {
+                    "gamma": 1.2
+                  }, {
+                    "saturation": -23
+                  }
+                ]
+              }, {
+                "featureType": "transit",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                  {
+                    "saturation": -64
+                  }, {
+                    "hue": "#ff9100"
+                  }, {
+                    "lightness": 16
+                  }, {
+                    "gamma": 0.47
+                  }, {
+                    "weight": 2.7
+                  }
+                ]
               }
             ]
-          },
-          {
-            "featureType": "road",
-            "elementType": "labels.icon"
-          },
-          {
-            "featureType": "landscape.man_made",
-            "elementType": "geometry",
-            "stylers": [
-              {
-                "hue": "#0077ff"
-              },
-              {
-                "gamma": 3.1
-              }
-            ]
-          },
-          {
-            "featureType": "water",
-            "stylers": [
-              {
-                "hue": "#00ccff"
-              },
-              {
-                "gamma": 0.44
-              },
-              {
-                "saturation": -33
-              }
-            ]
-          },
-          {
-            "featureType": "poi.park",
-            "stylers": [
-              {
-                "hue": "#44ff00"
-              },
-              {
-                "saturation": -23
-              }
-            ]
-          },
-          {
-            "featureType": "water",
-            "elementType": "labels.text.fill",
-            "stylers": [
-              {
-                "hue": "#007fff"
-              },
-              {
-                "gamma": 0.77
-              },
-              {
-                "saturation": 65
-              },
-              {
-                "lightness": 99
-              }
-            ]
-          },
-          {
-            "featureType": "water",
-            "elementType": "labels.text.stroke",
-            "stylers": [
-              {
-                "gamma": 0.11
-              },
-              {
-                "weight": 5.6
-              },
-              {
-                "saturation": 99
-              },
-              {
-                "hue": "#0091ff"
-              },
-              {
-                "lightness": -86
-              }
-            ]
-          },
-          {
-            "featureType": "transit.line",
-            "elementType": "geometry",
-            "stylers": [
-              {
-                "lightness": -48
-              },
-              {
-                "hue": "#ff5e00"
-              },
-              {
-                "gamma": 1.2
-              },
-              {
-                "saturation": -23
-              }
-            ]
-          },
-          {
-            "featureType": "transit",
-            "elementType": "labels.text.stroke",
-            "stylers": [
-              {
-                "saturation": -64
-              },
-              {
-                "hue": "#ff9100"
-              },
-              {
-                "lightness": 16
-              },
-              {
-                "gamma": 0.47
-              },
-              {
-                "weight": 2.7
-              }
-            ]
-          }
-        ]
-      });
-    }
-  </script>
-  <script src="js/main.min.js"></script>
-</body>
+          });
+      }
+    </script>
+    <script src="js/main.min.js"></script>
+  </body>
 </html>
