@@ -1,5 +1,9 @@
 $(function () {
 
+  $('.menu-btn').on('click', function () {
+    $('.menu').toggleClass('menu--active');
+  });
+
   var swiper = new Swiper('.swiper-container', {
     slidesPerView: 4,
     spaceBetween: 35,

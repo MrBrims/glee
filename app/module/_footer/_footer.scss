@@ -24,13 +24,14 @@
   }
   &__contact-details,
   &__services,
-  &__account
-  {
-    width: 270px;
+  &__account{
+    max-width: 270px;
+    width: 100%;
     margin-right: 30px;
   }
   &__newsletter{
     max-width: 270px;
+    width: 100%;
   }
   &__text{
     margin-bottom: 35px;
@@ -38,12 +39,14 @@
   &__form{
     @extend %dmsans-400;
     font-size: 12px;
+    display: flex;
   }
   &__form-email{
     border: none;
     padding: 10px 15px;
     background-color: $lshade;
-    width: 170px;
+    max-width: 170px;
+    width: 100%;
     &::placeholder{
       color: #234969;
     }
@@ -72,5 +75,35 @@
   }
   &__menu-list + .footer-copy__menu-list{
     border-left: 1px solid $text;
+  }
+}
+
+@media (max-width:800px){
+  .footer-top{
+    &__items{
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    &__contact-details,
+    &__services,
+    &__account,
+    &__newsletter{
+      width: 50%;
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width:500px){
+  .footer-top{
+    &__items{
+      justify-content: start;
+    }
+    &__contact-details,
+    &__services,
+    &__account,
+    &__newsletter{
+      width: 100%;
+    }
   }
 }
