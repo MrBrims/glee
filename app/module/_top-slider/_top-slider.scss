@@ -130,3 +130,36 @@
     line-height: 30px;
   }
 }
+
+@media (max-width:1200px){
+  .slider{
+    &__wrapper{
+      padding-top: 10px;
+    }
+    &__items{
+      background-position: 100% 0px;
+      background-size: contain;
+    }
+    &__item-content{
+      margin-left: 50px;
+      padding: 110px 0 120px;
+    }
+    &__item-title{
+      font-size: 55px;
+      line-height: 60px;
+      margin-bottom: 20px;
+    }
+    &__item-subtitle{
+      margin-right: 50px;
+    }
+  }
+}
+
+@media (max-width:1050px){
+  .slider{
+    &__item-images{
+      max-width: 500px;
+      object-fit: cover;
+    }
+  }
+}
