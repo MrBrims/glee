@@ -106,4 +106,12 @@
       width: 100%;
     }
   }
+  .footer-copy{
+    flex-wrap: wrap;
+    justify-content: center;
+    &__text{
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
 }
